@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ayojan-The headline EPO</title>
+<script  type="text/javascript">
+function validation(){
+	var box1=document.getElementById("num");
+	var pass1=document.getElementById("pass1");
+	var pass2=document.getElementById("pass2");
+
+
+	if(box1.value.length!=10){
+	alert("Enter a valid Number!");
+	return false;
+	}
+	else if(pass1.value.length<6){
+	alert("Please enter a valid Password!");
+	return false;
+	}
+	else if(pass2.value!=pass1.value){
+	alert("Please enter Correct Conformation Password!");
+	return false;
+	}
+	else
+	{  return true;}
+	}
+</script>
+<meta charset="UTF-8">  
+<link rel="stylesheet" type="text/css" href="register.css">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+<body>
+<div>  
+<form action="Register" method="post" onsubmit="return validation()"> 
+
+     <h2 class="text-warning text-center pt-5">Register</h2> 
+ <div class="col">
+      </div> 
+      	<lable>
+              <input 
+                     type="text" 
+                     class="input" 
+                     name="name"        
+                     placeholder="USERNAME" required/>        
+              <div class="line-box">         
+                <div class="line"></div>        
+              </div>    
+            </lable>  
+            
+			<label>     
+             <input type="email" class="input" name="email" placeholder="EMAIL" required/>                   <div class="line-box">          
+              <div class="line"></div>        
+             </div>    
+            </label>
+            <label>     
+              <input 
+                     type="tel" 
+                     class="input" 
+                     name="contact"  id="num"      
+                     placeholder="CONTACT_NUMBER" required/>        
+              <div class="line-box">         
+                <div class="line"></div>        
+              </div>    
+            </label>         
+             <label>     
+              <input 
+                     type="textarea" 
+                     class="input" 
+                     name="address"        
+                     placeholder="ADDRESS" required/>        
+              <div class="line-box">         
+                <div class="line"></div>        
+              </div>    
+            </label>         
+          <label>     
+              <input 
+                     type="password" 
+                     class="input" 
+                     name="pwd" id="pass1"
+                     placeholder="PASSWORD" required/>        
+              <div class="line-box">          
+                <div class="line"></div>        
+              </div>    
+            </label>                 
+            <label>     
+              <input 
+                     type="password" 
+                     class="input" 
+                     name="cpwd" id="pass2"
+                     placeholder="CONFIRM PASSWORD" required/>      
+              <div class="line-box">        
+                <div class="line"></div>      
+              </div>    
+            </label>     
+              <button  type="submit" >SUBMIT</button><br><br>
+            <p>Already have account?<a href="login.html"><i>Login</i></a>
+  
+          </form> 
+      </div> 
+</body>
+</html>
